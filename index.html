@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <div id="apptest">
+        
+        <button @click="counter++">count++</button>
+        <strong>{{counter}}</strong>
+        
+        <hr>
+
+        <!-- <input type="text" @keyup.enter="event => {tableContents.push(event.target.value)}"> -->
+        <input type="text" @keyup.enter="addToTable">
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="data in tableContents">
+                    <td>{{data}}</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="appVue.js"></script>
+</body>
+</html>
